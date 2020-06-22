@@ -1,0 +1,241 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-modal-overlay-color;
+  z-index: 98;
+
+  opacity: 1;
+  transition: opacity 250ms $timing-function;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+
+.modal {
+  position: absolute;
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  min-height: 581px;
+  max-width: 528px;
+  padding: 40px;
+
+  background-color: $bg-modal-color;
+  color: $primary-black-color;
+  @include font-size(20px, 1.15);
+  font-weight: 700;
+  box-shadow: $modal-shadow;
+  border-radius: 4px;
+
+  z-index: 99;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms $timing-function, opacity 250ms $timing-function;
+
+  &-title {
+    display: block;
+    margin-bottom: 28px;
+    text-align: center;
+  }
+}
+
+.form {
+  @include flex-center();
+  flex-direction: column;
+  color: $primary-text-color;
+
+  &-field {
+    position: relative;
+    width: 448px;
+    margin-bottom: 28px;
+
+    @include font-size(14px, 1.14);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+  }
+
+  &-input {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    padding-right: 16px;
+    border: 1px solid $form-border-color;
+    border-radius: 4px;
+    transition: border-color 250ms $timing-function;
+  }
+
+  &-input:focus {
+    border-color: $accent-color;
+    outline-color: $accent-color;
+  }
+
+  &-label {
+    position: absolute;
+    top: 50%;
+    left: 42px;
+    color: $primary-text-color;
+    transform: translateY(-50%);
+    transition: transform 250ms $timing-function, color 250ms $timing-function;
+  }
+
+  & .button {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  & .button:hover {
+    color: $btn-text-color;
+    background-color: $form-btn-send-color;
+  }
+}
+
+.icon-modal {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  fill: $primary-black-color;
+  transform: translateY(-50%);
+  transition: fill 250ms $timing-function;
+}
+
+.form-field:focus-within > .form-label {
+  color: $accent-color;
+  transform: translate(-25px, calc(-50% - 32px));
+}
+
+.form-field:focus-within > .icon-modal,
+.form-input:not(:placeholder-shown) ~ .icon-modal,
+.form-input:focus ~ .icon-modal {
+  fill: $accent-color;
+}
+
+.form-input:not(:placeholder-shown) + .form-label {
+  color: $accent-color;
+  transform: translate(-25px, calc(-50% - 32px));
+}
+
+.comment-field {
+  position: relative;
+  width: 448px;
+  margin-bottom: 20px;
+
+  @include font-size(14px, 1.14);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.comment-input {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid $form-border-color;
+  border-radius: 4px;
+  transition: border-color 250ms $timing-function;
+}
+
+.comment-input:focus {
+  border-color: $accent-color;
+  outline-color: $accent-color;
+}
+
+.comment-label {
+  display: inline-block;
+  position: absolute;
+  top: 12px;
+  left: 18px;
+  color: $primary-text-color;
+  transition: transform 250ms $timing-function, color 250ms $timing-function;
+}
+
+.comment-field:focus-within > .comment-label,
+.comment-input:not(:placeholder-shown) + .comment-label {
+  color: $accent-color;
+  transform: translateY(-31px);
+}
+
+.policy {
+  @include flex-center();
+  margin-bottom: 30px;
+  @include font-size(14px, 1.71);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+
+  &-agreement {
+    color: $accent-color;
+  }
+
+  &-agreement:active,
+  &-agreement:visited {
+    color: $visited-link-color;
+  }
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.icon-modal-checkbox {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 9px;
+  border: 2px solid $primary-black-color;
+  border-radius: 2px;
+  transition: border-color 250ms $timing-function,
+    background-image 250ms $timing-function,
+    background-color 250ms $timing-function;
+}
+
+.checkbox:checked + .icon-modal-checkbox {
+  border-color: $accent-color;
+  background-image: url(../images/svg/checkbox.svg);
+  background-color: $accent-color;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+}
+
+.button-close {
+  @include flex-center();
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: $bg-white-color;
+  border-radius: 50%;
+  box-shadow: $btn-close-shadow;
+  outline-color: $accent-color;
+}
+
+.icon-modal-close {
+  fill: $icon-modal-close-color;
+  transition: fill 250ms $timing-function;
+}
+.button-close:hover .icon-modal-close {
+  fill: $accent-color;
+}

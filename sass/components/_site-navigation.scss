@@ -1,0 +1,111 @@
+.nav,
+.nav-contacts {
+  @extend %list;
+  display: flex;
+
+  @include font-size(14px, 1.14);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  margin-left: 85px;
+}
+
+.item-nav:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav-item {
+  @extend %link;
+  display: block;
+  padding: 32px 0;
+
+  color: $heading-text-color;
+
+  transition: background-color 250ms $timing-function,
+    color 250ms $timing-function, transform 250ms $timing-function;
+
+  &::after {
+    display: block;
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $examples-accent-color;
+    border-radius: 4px;
+    opacity: 0;
+    transform: scaleX(0);
+
+    transition: opacity 250ms $timing-function, transform 250ms $timing-function;
+  }
+  &:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  &.current::after {
+    display: block;
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: $examples-accent-color;
+    border-radius: 4px;
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+
+.nav-contacts {
+  margin-left: auto;
+}
+
+.item-nav-contacts:not(:last-child) {
+  margin-right: 30px;
+}
+
+.nav-contacts-item {
+  @extend %link;
+  display: flex;
+  align-items: center;
+
+  color: $primary-text-color;
+
+  transition: background-color 250ms $timing-function,
+    color 250ms $timing-function, transform 250ms $timing-function;
+}
+
+.icon-envelope,
+.icon-smartphone {
+  margin-right: 10px;
+  fill: currentColor;
+  transition: transform 250ms $timing-function;
+}
+
+.nav-item:hover,
+.nav-item:focus,
+.nav-contacts-item:hover,
+.nav-contacts-item:focus {
+  color: $accent-color;
+}
+
+.nav-contacts-item:hover .icon-envelope,
+.nav-contacts-item:focus .icon-envelope,
+.nav-contacts-item:hover .icon-smartphone,
+.nav-contacts-item:focus .icon-smartphone {
+  transform: rotate(360deg);
+}
+
+.nav .current {
+  color: $accent-color;
+}
+
+.item-nav {
+  position: relative;
+}
