@@ -13,9 +13,7 @@
 
   &-list {
     @extend %list;
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
+    display: flex;
   }
 
   &-item {
@@ -40,12 +38,10 @@
 
   &-content-list {
     @extend %list;
-    @media screen and (min-width: 768px) {
-      display: flex;
-      justify-content: space-between;
-      align-content: center;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
   }
 
   &-content {

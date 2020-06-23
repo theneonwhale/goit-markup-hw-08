@@ -12,9 +12,7 @@
 
   &-list {
     @extend %list;
-    @media screen and (min-width: 768px) {
-      display: flex;
-    }
+    display: flex;
   }
 
   &-item {
@@ -42,11 +40,7 @@
 }
 
 .background-icon {
-  @media screen and (min-width: 768px) {
-    @include flex-center();
-    flex-wrap: wrap;
-  }
-
+  @include flex-center();
   height: 120px;
   margin-bottom: 30px;
 

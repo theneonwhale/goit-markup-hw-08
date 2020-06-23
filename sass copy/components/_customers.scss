@@ -1,0 +1,57 @@
+.customers {
+  &.container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  & .title {
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  &-list {
+    @extend %list;
+    display: flex;
+  }
+
+  &-item {
+    width: calc((100% - (30px * 5)) / 6);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  &-item:nth-child(6n) {
+    margin-right: 0;
+  }
+
+  &-item:nth-child(-n + 6) {
+    margin-bottom: 0;
+  }
+
+  &-link {
+    @extend %link;
+    @include flex-center();
+    height: 90px;
+
+    color: $customers-icon-color;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    transform: scale(1);
+
+    transition: color 250ms $timing-function, transform 250ms $timing-function;
+  }
+
+  &-link:hover {
+    color: $accent-color;
+    transform: scale(1.1);
+  }
+}
+
+.icon-yaco,
+.icon-co,
+.icon-com,
+.icon-foster,
+.icon-brand,
+.icon-comp {
+  fill: currentColor;
+}
