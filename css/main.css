@@ -443,6 +443,10 @@ button {
           box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.page-header .container {
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
   .page-header .container {
     display: -webkit-box;
@@ -490,6 +494,42 @@ button {
 
 .logo-footer .studio {
   color: #ffffff;
+}
+
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+}
+
+.menu-container.is-open {
+  display: block;
 }
 
 .nav,

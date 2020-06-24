@@ -1,3 +1,37 @@
+.menu-button {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  & .icon-cross {
+    display: none;
+  }
+  &.is-open .icon-menu {
+    display: none;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  z-index: 2;
+
+  &.is-open {
+    display: block;
+  }
+}
+
 .nav,
 .nav-contacts {
   @extend %list;
