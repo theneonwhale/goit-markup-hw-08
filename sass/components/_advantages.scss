@@ -1,8 +1,23 @@
 .advantages {
   .container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
+
+  @media screen and (min-width: 480px) {
+    // height: 570px;
+    width: 480px;
+  }
+
+  // @media screen and (min-width: 480px) {
+  //   height: 570px;
+  //   width: 480px;
+  // }
+
+  // @media screen and (min-width: 480px) {
+  //   height: 570px;
+  //   width: 480px;
+  // }
 
   &-title {
     @extend %visually-hidden;
@@ -12,18 +27,29 @@
 
   &-list {
     @extend %list;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px) {
       display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      // align-items: center;
     }
   }
 
   &-item {
-    width: calc((100% - (30px * 3)) / 4);
-    margin-right: 30px;
+    @media screen and (min-width: 480px) {
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+    }
   }
 
   &-item:nth-child(4n) {
-    margin-right: 0;
+    @media screen and (min-width: 480px) {
+      margin-bottom: 0;
+    }
   }
 
   & .item {
@@ -42,9 +68,10 @@
 }
 
 .background-icon {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     @include flex-center();
-    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 30px;
   }
 
   height: 120px;
@@ -54,9 +81,9 @@
   border-radius: 4px;
 }
 
-.icon-antenna,
-.icon-clock,
-.icon-diagram,
-.icon-astronaut {
-  animation: pulsing 2000ms infinite;
-}
+// .icon-antenna,
+// .icon-clock,
+// .icon-diagram,
+// .icon-astronaut {
+//   animation: pulsing 2000ms infinite;
+// }

@@ -1,7 +1,9 @@
 .customers {
-  &.container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+  & .container {
+    @media screen and (min-width: 480px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
 
   & .title {

@@ -1,19 +1,23 @@
 .team {
   background-color: $bg-team-color;
-
+  // display: none;
   & .container {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    @media screen and (min-width: 480px) {
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
   }
 
   & .title {
-    margin-top: 0;
-    margin-bottom: 50px;
+    @media screen and (min-width: 480px) {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &-list {
     @extend %list;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px) {
       display: flex;
     }
   }
