@@ -8,6 +8,9 @@
 }
 
 .logo {
+  @media screen and (min-width: 480px) {
+    @include font-size(24px, 1.16);
+  }
   @include font-size(26px, 1.19);
 
   & .web {

@@ -6,6 +6,20 @@
   height: 100%;
   background-color: $bg-modal-overlay-color;
   z-index: 98;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-top: 93px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 94px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 208px;
+    padding-right: 159px;
+    padding-left: 159px;
+    padding-bottom: 207px;
+  }
 
   opacity: 1;
   transition: opacity 250ms $timing-function;
@@ -22,14 +36,22 @@
 }
 
 .modal {
-  position: absolute;
   position: relative;
-  top: 50%;
-  left: 50%;
 
-  min-height: 581px;
-  max-width: 528px;
-  padding: 40px;
+  @media screen and (min-width: 480px) {
+    // min-height: 609px;
+    // max-width: 450px;
+    padding: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  // min-height: 581px;
+  // max-width: 528px;
+  // padding: 40px;
 
   background-color: $bg-modal-color;
   color: $primary-black-color;
@@ -40,7 +62,11 @@
 
   z-index: 99;
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+
+  @media screen and (min-width: 768px) {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
   transition: transform 250ms $timing-function, opacity 250ms $timing-function;
 
   &-title {
@@ -57,7 +83,10 @@
 
   &-field {
     position: relative;
-    width: 448px;
+    @media screen and (min-width: 480px) {
+      width: 370px;
+    }
+    // width: 448px;
     margin-bottom: 28px;
 
     @include font-size(14px, 1.14);
@@ -130,7 +159,10 @@
 
 .comment-field {
   position: relative;
-  width: 448px;
+  @media screen and (min-width: 480px) {
+    width: 370px;
+  }
+  // width: 448px;
   margin-bottom: 20px;
 
   @include font-size(14px, 1.14);
@@ -172,7 +204,7 @@
 .policy {
   @include flex-center();
   margin-bottom: 30px;
-  @include font-size(14px, 1.71);
+  @include font-size(12px, 1.16);
   font-weight: 400;
   letter-spacing: 0.03em;
 

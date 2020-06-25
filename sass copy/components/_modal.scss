@@ -7,6 +7,13 @@
   background-color: $bg-modal-overlay-color;
   z-index: 98;
 
+  @media screen and (min-width: 480px) {
+    padding-top: 93px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 94px;
+  }
+
   opacity: 1;
   transition: opacity 250ms $timing-function;
 
@@ -22,14 +29,20 @@
 }
 
 .modal {
-  position: absolute;
+  // position: absolute;
   position: relative;
   top: 50%;
   left: 50%;
 
-  min-height: 581px;
-  max-width: 528px;
-  padding: 40px;
+  @media screen and (min-width: 480px) {
+    min-height: 609px;
+    max-width: 450px;
+    padding: 40px;
+  }
+
+  // min-height: 581px;
+  // max-width: 528px;
+  // padding: 40px;
 
   background-color: $bg-modal-color;
   color: $primary-black-color;
@@ -57,7 +70,10 @@
 
   &-field {
     position: relative;
-    width: 448px;
+    @media screen and (min-width: 480px) {
+      width: 370px;
+    }
+    // width: 448px;
     margin-bottom: 28px;
 
     @include font-size(14px, 1.14);
@@ -130,7 +146,10 @@
 
 .comment-field {
   position: relative;
-  width: 448px;
+  @media screen and (min-width: 480px) {
+    width: 370px;
+  }
+  // width: 448px;
   margin-bottom: 20px;
 
   @include font-size(14px, 1.14);
