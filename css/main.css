@@ -1350,6 +1350,11 @@ button {
   text-align: center;
 }
 
+.team .img {
+  width: 100%;
+  height: auto;
+}
+
 .team-social .instagram,
 .team-social .twitter,
 .team-social .facebook,

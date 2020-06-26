@@ -121,6 +121,11 @@
     @include font-size(16px, 1.19);
     text-align: center;
   }
+
+  .img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .team-social {
