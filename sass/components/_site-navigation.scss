@@ -23,11 +23,11 @@
   &:focus {
     color: $accent-color;
   }
-}
 
-.icon-cross,
-.icon-menu {
-  fill: currentColor;
+  & .icon-cross,
+  & .icon-menu {
+    fill: currentColor;
+  }
 }
 
 .menu-container {
@@ -58,32 +58,57 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
 .nav,
 .nav-contacts {
   @extend %list;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
   @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @include font-size(18px, 1.16);
-    z-index: 1;
   }
+
   font-weight: 500;
   letter-spacing: 0.02em;
 }
 
 .nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 84px;
+    @include font-size(14px, 1.14);
+    z-index: 1;
+  }
   @media screen and (min-width: 1200px) {
     margin-left: 85px;
   }
 }
 
+.nav-contacts {
+  @extend %list;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include font-size(12px, 1.16);
+  }
+}
+
 .item-nav:not(:last-child) {
+  @media screen and (min-width: 768px) {
+    margin-right: 50px;
+  }
   @media screen and (min-width: 1200px) {
     margin-right: 50px;
   }
@@ -95,6 +120,9 @@
   @media screen and (max-width: 767px) {
     padding-bottom: 8px;
     padding-top: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
   }
 
   color: $heading-text-color;
@@ -151,6 +179,9 @@
 .item-nav-contacts:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 16px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
   }
   @media screen and (min-width: 1200px) {
     margin-right: 30px;
