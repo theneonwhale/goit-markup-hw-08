@@ -1,0 +1,7 @@
+.portfolio-title {
+  @extend %visually-hidden;
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  color: $heading-text-color;
+}
