@@ -1,6 +1,5 @@
 .team {
   background-color: $bg-team-color;
-  // display: none;
   & .container {
     @media screen and (min-width: 480px) {
       padding-top: 60px;
@@ -19,13 +18,28 @@
     @extend %list;
     @media screen and (min-width: 480px) {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
   &-item {
+    @media screen and (min-width: 480px) {
+      width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+
+      &:nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+
     width: calc((100% - (30px * 3)) / 4);
-    margin-right: 30px;
-    margin-bottom: 30px;
+    // margin-right: 30px;
+    // margin-bottom: 30px;
 
     background-color: $bg-employee-color;
     box-shadow: $team-item-shadow;
@@ -38,13 +52,10 @@
     margin-right: 0;
   }
 
-  &-item:nth-child(-n + 4) {
-    margin-bottom: 0;
-  }
-
   &-content-list {
     @extend %list;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 480px) {
+      width: 206px;
       display: flex;
       justify-content: space-between;
       align-content: center;
@@ -53,6 +64,13 @@
   }
 
   &-content {
+    @media screen and (min-width: 450px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: center;
+      align-items: center;
+    }
     padding-top: 30px;
     padding-bottom: 24px;
     padding-left: 32px;

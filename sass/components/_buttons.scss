@@ -42,7 +42,10 @@ button {
   position: relative;
   padding-left: 29px;
   padding-right: 28px;
-  margin-left: auto;
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+
   overflow: hidden;
 }
 

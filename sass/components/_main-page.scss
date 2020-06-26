@@ -1,6 +1,14 @@
 .title {
   color: $heading-text-color;
-  @include font-size(36px, 1.17);
+  @media screen and (min-width: 480px) {
+    @include font-size(28px, 1.17);
+  }
+  @media screen and (min-width: 768px) {
+    @include font-size(28px, 1.17);
+  }
+  @media screen and (min-width: 1200px) {
+    @include font-size(36px, 1.17);
+  }
   font-weight: 700;
   text-align: center;
 }
