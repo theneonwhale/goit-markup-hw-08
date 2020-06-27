@@ -1,10 +1,12 @@
 .team {
   background-color: $bg-team-color;
+
   .container {
     @media screen and (max-width: 1199px) {
       padding-top: 60px;
       padding-bottom: 60px;
     }
+
     @media screen and (min-width: 1200px) {
       padding-top: 94px;
       padding-bottom: 94px;
@@ -16,6 +18,7 @@
       margin-top: 0;
       margin-bottom: 30px;
     }
+
     @media screen and (min-width: 1200px) {
       margin-top: 0;
       margin-bottom: 50px;
@@ -24,17 +27,20 @@
 
   &-list {
     @extend %list;
+
     @media screen and (max-width: 767px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
     }
+
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
       margin: -15px;
     }
+
     @media screen and (min-width: 1200px) {
       display: flex;
       flex-wrap: nowrap;

@@ -98,11 +98,6 @@
     font-weight: 700;
     letter-spacing: 0.06em;
   }
-
-  .img {
-    width: 100%;
-    height: auto;
-  }
 }
 
 .description {
@@ -111,15 +106,19 @@
   left: 0;
   margin-top: 0;
   margin-bottom: 0;
+
   @media screen and (max-width: 767px) {
     padding-top: 77px;
   }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     padding-top: 49px;
   }
+
   @media screen and (min-width: 1200px) {
     padding-top: 63px;
   }
+  
   padding-left: 24px;
   padding-right: 24px;
 
