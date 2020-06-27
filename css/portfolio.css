@@ -864,7 +864,7 @@ button {
   position: relative;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .portfolio .container {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -884,9 +884,9 @@ button {
   color: #212121;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .filter {
-    min-width: 450px;
+    max-width: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -904,6 +904,7 @@ button {
 
 @media screen and (min-width: 768px) {
   .filter {
+    min-width: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -966,8 +967,13 @@ button {
 
 @media screen and (min-width: 768px) {
   .examples {
-    min-width: 768px;
     margin: -15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .examples {
+    max-width: 1200px;
   }
 }
 
@@ -991,7 +997,7 @@ button {
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .examples-item {
     width: 450px;
     margin-bottom: 30px;
@@ -1007,26 +1013,13 @@ button {
 
 @media screen and (min-width: 1200px) {
   .examples-item {
-    width: calc((100% - (30px * 2)) / 3);
-    margin-right: 30px;
-    margin-bottom: 30px;
+    width: calc((100% - (30px * 3)) / 3);
+    margin: 15px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .examples-item:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .examples-item:nth-child(9) {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .examples-item:nth-child(n + 7) {
     margin-bottom: 0;
   }
 }
@@ -1059,9 +1052,15 @@ button {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .examples-thumb::before {
     padding: 77px 24px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .examples-thumb::before {
+    padding: 49px 24px;
   }
 }
 
@@ -1119,9 +1118,15 @@ button {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .description {
     padding-top: 77px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .description {
+    padding-top: 49px;
   }
 }
 

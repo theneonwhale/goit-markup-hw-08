@@ -29,12 +29,6 @@
   margin-top: 0;
   margin-bottom: 20px;
 
-  // @media screen and (min-width: 480px) {
-  //   // margin-left: auto;
-  //   // margin-right: auto;
-  //   text-align: center;
-  // }
-
   @include font-size(22px, 1.18);
 
   & .web {

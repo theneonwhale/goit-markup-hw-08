@@ -2,9 +2,13 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
+
   @media screen and (min-width: 768px) {
-    min-width: 768px;
     margin: -15px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
   }
 
   &-link {
@@ -16,7 +20,7 @@
 
   &-item {
     position: relative;
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
       width: 450px;
       margin-bottom: 30px;
     }
@@ -25,27 +29,16 @@
       margin: 15px;
     }
     @media screen and (min-width: 1200px) {
-      width: calc((100% - (30px * 2)) / 3);
-      margin-right: 30px;
-      margin-bottom: 30px;
+      width: calc((100% - (30px * 3)) / 3);
+      margin: 15px;
     }
 
     background-color: $bg-example-color;
     transition: box-shadow 250ms $timing-function;
   }
 
-  &-item:nth-child(3n) {
-    @media screen and (min-width: 1200px) {
-      margin-right: 0;
-    }
-  }
   &-item:nth-child(9) {
-    @media screen and (min-width: 480px) {
-      margin-bottom: 0;
-    }
-  }
-  &-item:nth-child(n + 7) {
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
       margin-bottom: 0;
     }
   }
@@ -62,8 +55,11 @@
 
   &-thumb::before {
     display: block;
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
       padding: 77px 24px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding: 49px 24px;
     }
     @media screen and (min-width: 1200px) {
       padding: 63px 24px;
@@ -115,8 +111,11 @@
   left: 0;
   margin-top: 0;
   margin-bottom: 0;
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     padding-top: 77px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 49px;
   }
   @media screen and (min-width: 1200px) {
     padding-top: 63px;

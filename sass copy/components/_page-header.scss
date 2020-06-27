@@ -1,8 +1,0 @@
-.page-header {
-  background-color: $bg-white-color;
-  box-shadow: $header-box-shadow;
-
-  & .container {
-    @include flex-center();
-  }
-}

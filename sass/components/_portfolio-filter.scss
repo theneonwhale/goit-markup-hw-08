@@ -1,7 +1,7 @@
 .filter {
   @extend %list;
-  @media screen and (min-width: 480px) {
-    min-width: 450px;
+  @media screen and (max-width: 767px) {
+    max-width: 450px;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -12,6 +12,7 @@
     }
   }
   @media screen and (min-width: 768px) {
+    min-width: 450px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
