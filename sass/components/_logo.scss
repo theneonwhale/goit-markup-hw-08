@@ -8,10 +8,13 @@
 }
 
 .logo {
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1199px) {
     @include font-size(24px, 1.16);
   }
-  @include font-size(26px, 1.19);
+  @media screen and (min-width: 1200px) {
+    margin-right: 85px;
+    @include font-size(26px, 1.19);
+  }
 
   & .web {
     color: $logo-web-color;

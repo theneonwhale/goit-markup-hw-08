@@ -1,8 +1,12 @@
 .advantages {
   .container {
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 1199px) {
       padding-top: 60px;
       padding-bottom: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
     }
   }
 
@@ -14,7 +18,7 @@
 
   &-list {
     @extend %list;
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -23,15 +27,19 @@
     @media screen and (min-width: 768px) {
       display: flex;
       justify-content: flex-start;
-      flex-wrap: wrap;
       align-items: flex-start;
+      margin: -15px;
+    }
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+      align-items: center;
       margin: -15px;
     }
   }
 
   &-item {
-    @media screen and (min-width: 480px) {
-      width: 450px;
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -41,9 +49,18 @@
     @media screen and (min-width: 768px) {
       width: calc((100% - (30px * 2)) / 2);
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      // flex-wrap: wrap;
       justify-content: flex-start;
       align-items: flex-start;
+      margin: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - (30px * 4)) / 4);
+      display: flex;
+      // flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
       margin: 15px;
     }
   }

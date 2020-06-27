@@ -5,39 +5,60 @@
   background-color: $bg-footer-color;
 
   & .container {
-    @media screen and (min-width: 480px) {
-      display: flex;
+    display: flex;
+    @media screen and (max-width: 1199px) {
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      align-items: baseline;
+      justify-content: space-between;
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
-  .tablet-container {
+.tablet-container {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     justify-content: space-between;
     min-width: 603px;
   }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }
 
 .address-container {
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 60px;
   }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 69px;
+  }
 }
 
 .address {
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
   }
 
   @include font-size(14px, 1.71);
@@ -47,10 +68,12 @@
 .place {
   @extend %link;
   display: inline-block;
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 8px;
   }
-  margin-bottom: 9px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 9px;
+  }
 
   color: $primary-white-color;
 }
@@ -62,20 +85,29 @@
   color: $contacts-footer-color;
 
   &:not(:last-child) {
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 1199px) {
       margin-bottom: 8px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
     }
   }
 }
 
 .social {
   min-width: 206px;
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    // justify-content: center;
   }
 
   &-list {
@@ -112,22 +144,32 @@
 }
 
 .subscribe {
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 1199px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-  display: block;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 94px;
+    // align-items: center;
+    // justify-content: center;
+  }
 
   &-form {
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 1199px) {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
     }
-    display: flex;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      // align-items: center;
+      // justify-content: center;
+    }
   }
 }
 
@@ -135,11 +177,14 @@
   display: block;
   height: 50px;
   padding: 18px 12px;
-  // margin-right: 12px;
 
-  @media screen and (min-width: 480px) {
-    width: 450px;
+  @media screen and (max-width: 1199px) {
+    max-width: 450px;
     margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+    margin-right: 12px;
   }
 
   color: $email-subscribe-color;

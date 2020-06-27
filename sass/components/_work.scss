@@ -1,46 +1,30 @@
 .work {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     display: none;
-    width: 480px;
   }
 
-  &.container {
-    @media screen and (min-width: 480px) {
-      // display: none;
-      width: 480px;
+  .container {
+    @media screen and (min-width: 1200px) {
+      padding-bottom: 94px;
     }
-    padding-bottom: 94px;
 
     text-align: center;
   }
 
   & .title {
     color: $heading-text-color;
-    @media screen and (min-width: 480px) {
-      @include font-size(28px, 1.17);
-    }
-
     margin-top: 0;
     margin-bottom: 50px;
   }
 
   &-list {
     @extend %list;
-    @media screen and (min-width: 480px) {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    @media screen and (min-width: 1200px) {
-      display: flex;
-    }
+    display: flex;
   }
 
   &-item {
     position: relative;
-    @media screen and (min-width: 768px) {
-      width: calc((100% - (30px * 2)) / 3);
-    }
+    width: calc((100% - (30px * 2)) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
   }
