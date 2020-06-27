@@ -903,19 +903,20 @@ button {
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    height: 400px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -961,7 +962,7 @@ button {
   text-align: center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .title {
     font-size: 28px;
     line-height: 1.17;
@@ -1012,11 +1013,11 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1028,6 +1029,8 @@ button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
@@ -1139,6 +1142,16 @@ button {
             justify-content: center;
     width: 100%;
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-antenna,
+  .icon-clock,
+  .icon-diagram,
+  .icon-astronaut {
+    -webkit-animation: pulsing 2000ms infinite;
+            animation: pulsing 2000ms infinite;
   }
 }
 
@@ -1278,7 +1291,30 @@ button {
   overflow: hidden;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 479px) {
+  .team-item {
+    max-width: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 30px;
+  }
+  .team-item:nth-child(4) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .team-item {
     width: 450px;
     display: -webkit-box;
@@ -1964,9 +2000,16 @@ button {
   border-radius: 4px;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
   .email-subscribe {
     max-width: 450px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .email-subscribe {
+    width: 450px;
     margin-bottom: 20px;
   }
 }

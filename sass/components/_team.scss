@@ -43,7 +43,20 @@
   }
 
   &-item {
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 479px) {
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+
+      &:nth-child(4) {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
       width: 450px;
       display: flex;
       flex-direction: column;
