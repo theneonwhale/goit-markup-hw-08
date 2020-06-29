@@ -205,7 +205,10 @@
 .icon-smartphone {
   margin-right: 10px;
   fill: currentColor;
-  transition: transform 250ms $timing-function;
+
+  @media screen and (min-width: 1200px) {
+    transition: transform 250ms $timing-function;
+  }
 }
 
 .nav-item:hover,
@@ -219,7 +222,9 @@
 .nav-contacts-item:focus .icon-envelope,
 .nav-contacts-item:hover .icon-smartphone,
 .nav-contacts-item:focus .icon-smartphone {
-  transform: rotate(360deg);
+  @media screen and (min-width: 1200px) {
+    transform: rotate(360deg);
+  }
 }
 
 .nav .current {

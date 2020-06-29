@@ -838,10 +838,16 @@ button {
 .icon-smartphone {
   margin-right: 10px;
   fill: currentColor;
-  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 1200px) {
+  .icon-envelope,
+  .icon-smartphone {
+    -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 .nav-item:hover,
@@ -851,12 +857,14 @@ button {
   color: #2196f3;
 }
 
-.nav-contacts-item:hover .icon-envelope,
-.nav-contacts-item:focus .icon-envelope,
-.nav-contacts-item:hover .icon-smartphone,
-.nav-contacts-item:focus .icon-smartphone {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+@media screen and (min-width: 1200px) {
+  .nav-contacts-item:hover .icon-envelope,
+  .nav-contacts-item:focus .icon-envelope,
+  .nav-contacts-item:hover .icon-smartphone,
+  .nav-contacts-item:focus .icon-smartphone {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .nav .current {
