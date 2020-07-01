@@ -528,8 +528,20 @@ button {
 .logo-footer {
   margin-top: 0;
   margin-bottom: 20px;
-  font-size: 22px;
-  line-height: 1.18;
+}
+
+@media screen and (max-width: 1199px) {
+  .logo-footer {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    font-size: 22px;
+    line-height: 1.18;
+  }
 }
 
 .logo-footer .web {
@@ -679,7 +691,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .nav-contacts {
-    margin-top: 48px;
+    margin-top: 60px;
   }
 }
 
@@ -1197,6 +1209,12 @@ button {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .tablet-container {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .tablet-container {
     display: -webkit-box;
@@ -1260,7 +1278,6 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 60px;
   }
 }
 
@@ -1366,7 +1383,6 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 60px;
   }
 }
 

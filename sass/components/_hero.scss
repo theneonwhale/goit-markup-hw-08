@@ -88,6 +88,10 @@
   }
 
   &-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 0;
     margin-bottom: 30px;
 
@@ -95,12 +99,11 @@
     font-weight: 900;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    @media screen and (min-width: 480px) {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    @media screen and (max-width: 1199px) {
       @include font-size(26px, 1.62);
+    }
+    @media screen and (min-width: 1200px) {
+      @include font-size(44px, 1.36);
     }
   }
 }

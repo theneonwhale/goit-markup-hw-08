@@ -531,8 +531,20 @@ button {
 .logo-footer {
   margin-top: 0;
   margin-bottom: 20px;
-  font-size: 22px;
-  line-height: 1.18;
+}
+
+@media screen and (max-width: 1199px) {
+  .logo-footer {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    font-size: 22px;
+    line-height: 1.18;
+  }
 }
 
 .logo-footer .web {
@@ -682,7 +694,7 @@ button {
 
 @media screen and (max-width: 767px) {
   .nav-contacts {
-    margin-top: 48px;
+    margin-top: 60px;
   }
 }
 
@@ -961,6 +973,19 @@ button {
 }
 
 .hero-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-top: 0;
   margin-bottom: 30px;
   color: #ffffff;
@@ -969,23 +994,17 @@ button {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 1199px) {
   .hero-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     font-size: 26px;
     line-height: 1.62;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
@@ -1116,9 +1135,9 @@ button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1129,16 +1148,6 @@ button {
 @media screen and (min-width: 1200px) {
   .advantages-item {
     width: calc((100% - (30px * 4)) / 4);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 15px;
   }
 }
 
@@ -1659,6 +1668,12 @@ button {
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .tablet-container {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .tablet-container {
     display: -webkit-box;
@@ -1722,7 +1737,6 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 60px;
   }
 }
 
@@ -1828,7 +1842,6 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 60px;
   }
 }
 

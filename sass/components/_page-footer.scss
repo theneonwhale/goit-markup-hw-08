@@ -20,12 +20,17 @@
 }
 
 .tablet-container {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     min-width: 603px;
   }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     justify-content: space-between;
@@ -46,7 +51,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
@@ -107,7 +111,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 60px;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
